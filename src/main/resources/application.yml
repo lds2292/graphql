@@ -6,3 +6,12 @@ spring:
     username: root
     password: 1qaz1qaz
     url: jdbc:mysql://localhost:3306/test
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+graphql:
+  servlet:
+    enabled: true
+    mapping: /graphql

@@ -1,16 +1,24 @@
-type Query{
-    bookById(id: ID): Book
+schema {
+    query: Query
+#    mutation: Mutation
 }
 
-type Book {
-    id: ID
-    name: String
-    pageCount: Int
-    author: Author
+#type Mutation {
+#    createMember(saveMemberInfo: SaveMember!): Member!
+#    deleteMember(id: Int!): Boolean!
+#}
+
+#input SaveMember {
+#    name: String!
+#    age: Int
+#}
+
+type Query {
+    memberById(id : Int!) : Member
 }
 
-type Author {
-    id: ID
-    firstName: String
-    lastName: String
+type Member {
+    id: Int!
+    name: String!
+    age: Int
 }
