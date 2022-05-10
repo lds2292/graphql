@@ -1,17 +1,17 @@
 schema {
     query: Query
-#    mutation: Mutation
+    mutation: Mutation
 }
 
-#type Mutation {
-#    createMember(saveMemberInfo: SaveMember!): Member!
+type Mutation {
+    createMember(saveMemberInfo: SaveMember!): Member!
 #    deleteMember(id: Int!): Boolean!
-#}
+}
 
-#input SaveMember {
-#    name: String!
-#    age: Int
-#}
+input SaveMember {
+    name: String!
+    age: Int
+}
 
 type Query {
     memberById(id : Int!) : Member
